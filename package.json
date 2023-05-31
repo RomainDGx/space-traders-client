@@ -1,0 +1,15 @@
+{
+  "name": "SpaceTradersClient",
+  "version": "1.0.0",
+  "description": "Web client for SpaceTraders game",
+  "main": "index.ts",
+  "author": "RomainDGx",
+  "license": "MIT",
+  "dependencies": {
+    "luxon": "^3.3.0"
+  },
+  "devDependencies": {
+    "@types/luxon": "^3.3.0",
+    "typescript": "^5.0.4"
+  }
+}

@@ -1,7 +1,7 @@
 {
-  "name": "SpaceTradersClient",
+  "name": "space-traders-client",
   "version": "1.0.0",
-  "description": "Web client for SpaceTraders game",
+  "description": "Web client for SpaceTraders game.",
   "main": "index.ts",
   "author": "RomainDGx",
   "license": "MIT",

@@ -1,9 +1,8 @@
 import { WaypointType } from './WaypointType';
 
-export type ShipNavRouteWaypoint = {
+export type SystemWaypoint = {
     symbol: string;
     type: WaypointType;
-    systemSymbol: string;
     x: number;
     y: number;
 }

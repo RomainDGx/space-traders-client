@@ -1,3 +1,4 @@
+import { ShipCondition } from './ShipCondition';
 import { ShipRequirements } from './ShipRequirements';
 
 export type ShipEngine = {
@@ -5,7 +6,7 @@ export type ShipEngine = {
             'ENGINE_ION_DRIVE_I' | 'IENGINE_HYPER_DRIVE_I';
     name: string;
     description: string;
-    condition: number;
+    condition: ShipCondition;
     speed: number;
     requirements: ShipRequirements;
 }

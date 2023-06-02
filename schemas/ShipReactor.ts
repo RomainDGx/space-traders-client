@@ -1,3 +1,4 @@
+import { ShipCondition } from './ShipCondition';
 import { ShipRequirements } from './ShipRequirements';
 
 export type ShipReactor = {
@@ -6,7 +7,7 @@ export type ShipReactor = {
             'REACTOR_ANTIMATTER_I';
     name: string;
     description: string;
-    condition: number;
+    condition: ShipCondition;
     powerOutput: number;
     requirements: ShipRequirements;
 }

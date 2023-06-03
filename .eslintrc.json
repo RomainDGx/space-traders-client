@@ -14,7 +14,21 @@
         "quotes": ["error", "single"],
         
         "indent": ["error", 4, { "ignoredNodes": ["ConditionalExpression"] }],
-        "no-unused-vars": ["error", { "vars": "all" }]
+        "no-unused-vars": ["error", { "vars": "all" }],
+        "arrow-parens": ["error", "always"],
+        "capitalized-comments": ["warn", "always"],
+        "multiline-comment-style": ["warn", "starred-block"],
+        "spaced-comment": ["warn", "always"],
+        "no-duplicate-imports": ["error"],
+        "no-trailing-spaces": ["error"],
+        "no-whitespace-before-property": ["error"],
+        "space-before-function-paren": ["error", {
+            "anonymous": "always",
+            "named": "never",
+            "asyncArrow": "always"
+        }],
+        "space-in-parens": ["error", "never"],
+        "space-infix-ops": ["error"]
     },
     "ignorePatterns": ["build/*"]
 }

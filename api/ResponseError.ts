@@ -6,14 +6,14 @@ export type ResponseError = {
     };
 }
 
-//#region General Error Codes
+// #region General Error Codes
 
 export const cooldownConflictError = 4000;
 export const waypointNoAccessError = 4001;
 
-//#endregion
+// #endregion
 
-//#region Account Error Codes
+// #region Account Error Codes
 
 export const tokenEmptyError = 4100;
 export const tokenMissingSubjectError = 4101;
@@ -26,9 +26,9 @@ export const agentNotExistsError = 4107;
 export const accountHasNoAgentError = 4108;
 export const registerAgentExistsError = 4109;
 
-//#endregion
+// #endregion
 
-//#region Ship Error Codes
+// #region Ship Error Codes
 
 export const navigateInTransitError = 4200;
 export const navigateInvalidDestinationError = 4201;
@@ -70,9 +70,9 @@ export const shipInvalidRefineryTypeError = 4238;
 export const shipMissingRefineryError = 4239;
 export const shipMissingSurveyorError = 4240;
 
-//#endregion
+// #endregion
 
-//#region Contract Error Codes
+// #region Contract Error Codes
 
 export const acceptContractNotAuthorizedError = 4500;
 export const acceptContractConflictError = 4501;
@@ -85,9 +85,9 @@ export const shipDeliverTermsError = 4508;
 export const shipDeliverFulfilledError = 4509;
 export const shipDeliverInvalidLocationError = 4510;
 
-//#endregion
+// #endregion
 
-//#region Market Error Codes
+// #region Market Error Codes
 
 export const marketTradeInsufficientCreditsError = 4600;
 export const marketTradeNoPurchaseError = 4601;
@@ -95,4 +95,4 @@ export const marketTradeNotSoldError = 4602;
 export const marketNotFoundError = 4603;
 export const marketTradeUnitLimitError = 4604;
 
-//#endregion
+// #endregion

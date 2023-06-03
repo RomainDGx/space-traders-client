@@ -1,7 +1,6 @@
 import { DateTime } from 'luxon';
-import { API_URL } from './config';
 import axios from 'axios';
-import { AxiosHeaders } from 'axios';
+import { stringToDateTime } from './util';
 
 export type ApplicationStatus = {
     status: string;
@@ -38,13 +37,9 @@ export type ApplicationStatus = {
     }>;
 }
 
-const endpoint = API_URL;
-
 export async function getStatusAsync(): Promise<ApplicationStatus> {
-    const response = await axios.get<ApplicationStatus>(endpoint, { headers: new AxiosHeaders().setAccept('application/json') });
-    if (response.status === 200) {
-        response.data.serverResets.next = DateTime.fromISO(response.data.serverResets.next.toString());
-        return response.data;
-    }
-    throw new Error(response.statusText);
+
+    const response = await axios.get<ApplicationStatus>('/');
+    response.data.serverResets.next = stringToDateTime(response.data.serverResets.next);
+    return response.data;
 }

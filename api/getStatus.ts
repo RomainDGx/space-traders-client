@@ -1,11 +1,10 @@
 import { DateTime } from 'luxon';
 import axios from 'axios';
-import { stringToDateTime } from './util';
 
 export type ApplicationStatus = {
     status: string;
     version: string;
-    resetDate: string;
+    resetDate: DateTime;
     description: string;
     stats: {
         agents: number;
@@ -38,8 +37,6 @@ export type ApplicationStatus = {
 }
 
 export async function getStatusAsync(): Promise<ApplicationStatus> {
-
     const response = await axios.get<ApplicationStatus>('/');
-    response.data.serverResets.next = stringToDateTime(response.data.serverResets.next);
     return response.data;
 }

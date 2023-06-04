@@ -1,17 +1,9 @@
 import { DateTime } from 'luxon';
+import { ContractPayment } from './ContractPayment';
+import { ContractDeliverGood } from './ContractDeliverGood';
 
 export type ContractTerms = {
     deadline: DateTime;
-    payment: {
-        onAccepted: number;
-        onFulfilled: number;
-    },
-    deliver: [
-        {
-            tradeSymbol: string;
-            destinationSymbol: string;
-            unitsRequired: number;
-            unitsFulfilled: number;
-        }
-    ]
+    payment: ContractPayment;
+    deliver: Array<ContractDeliverGood>;
 }

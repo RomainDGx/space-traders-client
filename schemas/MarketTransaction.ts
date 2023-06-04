@@ -7,6 +7,6 @@ export type MarketTransaction = {
     type: 'PURCHASE' | 'SELL';
     units: number
     pricePerUnit: number;
-    totalPrice: 0,
+    totalPrice: number;
     timestamp: DateTime;
 }

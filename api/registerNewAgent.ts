@@ -15,9 +15,9 @@ export type RegisterResponse = {
     };
 }
 
-export async function registerNewAgentAsync(symbol: string, faction: 'COSMIC' | 'VOID' | 'GALACTIC' | 'QUANTUM' | 'DOMINION', email: string): Promise<RegisterResponse> {
+export async function registerNewAgentAsync(symbol: string, faction: 'COSMIC' | 'VOID' | 'GALACTIC' | 'QUANTUM' | 'DOMINION', email?: string): Promise<RegisterResponse> {
 
-    const response = await axios.post<RegisterResponse>(API_URL + 'register', { symbol, faction, email });
+    const response = await axios.post<RegisterResponse>(API_URL + '/register', { symbol, faction, ...email && { email } });
 
     if (response.status !== 200) {
         throw new Error(response.statusText);
